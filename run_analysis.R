@@ -39,3 +39,7 @@ colnames(tidy_train) = colnames(tidy_test) = c('Subject_no', 'Activity_name', un
 
 #combinging the two dataframes
 tidy = rbind(tidy_train, tidy_test)
+tidy = aggregate(tidy[,3:88], by=list(Subject_no = tidy$Subject_no, Activity_name = tidy$Activity_name), mean)
+
+#saving the csv
+write.table(tidy, 'tidy_dataset.txt', row.names = FALSE)
