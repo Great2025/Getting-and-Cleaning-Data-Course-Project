@@ -93,3 +93,5 @@ St 11 Combinging the two dataframes and saving in a new .txt file
 
 These are added as annotations in the file as well
 
+In the final step, mean of the aggregate, according to subject number and activity name is taken.
+
